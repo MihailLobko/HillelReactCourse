@@ -37,13 +37,9 @@ const LoginFormComponent = () => {
   return (
     <form onSubmit={handleSubmit}>
       <PrimaryUserDataComponent
-        firstName={userData.firstName}
-        lastName={userData.lastName}
         onChange={handleChange}
       />
       <SecondaryUserDataComponent
-        email={userData.email}
-        password={userData.password}
         onChange={handleChange}
       />
       <Button disabled={!submitActive} variant="submit" type="submit">

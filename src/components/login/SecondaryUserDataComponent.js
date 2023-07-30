@@ -2,7 +2,7 @@ import TextField from "@mui/material/TextField";
 import React, { useState } from "react";
 import { isPasswordValid, isEmailValid } from "./LoginFormValidator";
 
-const SecondaryUserDataComponent = ({ email, password, onChange }) => {
+const SecondaryUserDataComponent = ({onChange }) => {
   const [dataValid, setDataValid] = useState({
     email: false,
     password: false,

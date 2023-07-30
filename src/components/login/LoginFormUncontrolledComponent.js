@@ -32,8 +32,6 @@ const LoginFormUncontrolledComponent = () => {
     const firstName = firstNameRef.current.value;
     const lastName = lastNameRef.current.value;
 
-    console.log(firstName);
-
     const passwordValid = isPasswordValid(password);
     const emailValid = isEmailValid(email);
     const firstNameValid = isPrimaryUserDataValid(firstName);
