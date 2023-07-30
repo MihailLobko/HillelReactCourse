@@ -2,7 +2,8 @@ import "../src/App.css";
 import React, { useState, useEffect } from "react";
 import { Box, CircularProgress } from "@mui/material";
 import BlogComponent from "./components/BlogComponent";
-
+import LoginFormComponent from "./components/login/LoginFormComponent";
+import LoginFormUncontrolledComponent from "./components/login/LoginFormUncontrolledComponent";
 const App = () => {
   const [dataLoad, setDataLoad] = useState(true);
   const [tableData, setTableData] = useState([]);
@@ -40,12 +41,15 @@ const App = () => {
           <CircularProgress />
         </Box>
       ) : (
-        <BlogComponent
-          posts={tableData}
-          onDelete={handleDeleteRow}
-          onEdit={handleSaveRowEdits}
-          onCreate={handleCreateNewRow}
-        />
+        <>
+          <LoginFormUncontrolledComponent />
+          <BlogComponent
+            posts={tableData}
+            onDelete={handleDeleteRow}
+            onEdit={handleSaveRowEdits}
+            onCreate={handleCreateNewRow}
+          />
+        </>
       )}
     </div>
   );
