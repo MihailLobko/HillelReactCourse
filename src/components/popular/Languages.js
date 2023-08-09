@@ -1,6 +1,8 @@
+import { memo } from "react";
+
 const languages = ["All", "Javascript", "Java", "Ruby", "CSS", "Pyton"];
 
-const Languges = ({ onSelectedLanguage, selectedLanguage, loading }) => {
+const Languges = memo(({ onSelectedLanguage, selectedLanguage, loading }) => {
   return (
     <ul className="languages">
       {languages.map((language, index) => (
@@ -19,6 +21,6 @@ const Languges = ({ onSelectedLanguage, selectedLanguage, loading }) => {
       ))}
     </ul>
   );
-};
+});
 
 export default Languges;

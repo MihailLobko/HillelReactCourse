@@ -5,6 +5,7 @@ import Home from "./components/home/Home";
 import Popular from "./components/popular/Popular";
 import Battle from "./components/battle/Battle";
 import Layout from "./components/layout/Layout";
+import Result from "./components/battle/Results";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const App = () => {
         {
           path: "battle",
           element: <Battle />,
+        },
+        {
+          path: "battle/result",
+          element: <Result />,
         },
         {
           path: "*",
